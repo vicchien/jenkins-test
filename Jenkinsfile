@@ -10,7 +10,7 @@ pipeline {
                     sh '''
                         set +x
                         source ~/.bashrc
-                        python top_cpu_usage.py 5 "${kill_process}"
+                        python top_cpu_usage.py 1 "${kill_process}"
                         git tag ${BUILD_ID}
                         git push origin ${BUILD_ID}
                     '''
